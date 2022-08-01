@@ -1,0 +1,23 @@
+﻿@model UserViewModel
+
+@section LeftNav{
+    @if (Model.Name != null && Model.Name != String.Empty)
+    {
+        <h3 class="mx-3">Hi @Model.Name!</h3>
+    }
+    <a class="btn btn-danger" asp-action="SignOut">Sign Out</a>
+}
+
+<div>
+    <label class="col-sm-2 col-form-label" asp-for="Name"></label>
+    <span><b>@Model.Name</b></span>
+    <br />
+    @if (Model.Email != String.Empty)
+    {
+        <label class="col-sm-2 col-form-label" asp-for="Email"></label>
+        <span><b>@Model.Email</b></span>
+        <br />
+    }
+    <label class="col-sm-2 col-form-label" asp-for="Role"></label>
+    <span><b>@Model.Role</b></span>
+</div>

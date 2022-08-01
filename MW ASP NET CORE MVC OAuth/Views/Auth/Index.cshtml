@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@*<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>*@
+
+<div>
+    <div>
+        <h1>Login with:</h1>
+    </div>
+    <div>
+        <a class="btn btn-success" asp-action="OAuthLogin" asp-route-type="@OAuthType.Google"><h5>Google</h5></a>
+        <a class="btn btn-warning" asp-action="OAuthLogin" asp-route-type="@OAuthType.MicrosoftAccount"><h5>Microsoft Account</h5></a>
+        <a class="btn btn-primary" asp-action="OAuthLogin" asp-route-type="@OAuthType.Facebook"><h5>Facebook</h5></a>
+        <a class="btn btn-primary" asp-action="OAuthLogin" asp-route-type="@OAuthType.GitHub"><h5>Git Hub</h5></a>
+    </div>
+</div>
